@@ -1,4 +1,4 @@
-# Spooler Potato — BOF
+# Spooler Potato - BOF
 
 A Beacon Object File that abuses `SeImpersonatePrivilege` + the MS-RPRN "printer bug" to spawn a process as SYSTEM.
 
@@ -21,26 +21,24 @@ A Beacon Object File that abuses `SeImpersonatePrivilege` + the MS-RPRN "printer
 ## Usage
 
 ```
-spooler-potato                  # no args: SYSTEM token applied to the Beacon (revert with rev2self)
-spooler-potato whoami /priv     # with args: run a command as SYSTEM, output is captured
+spooler-potato                  # no args: SYSTEM token applied to the Beacon (revert with rev2self / revert)
+spooler-potato whoami           # with args: run a command as SYSTEM, output is captured
 ```
 
 ![system beacon](.images/lesson8-3.png)
 
-That's it — you're SYSTEM.
+Thats it u r SYSTEM.
 
 ## Build
 
-Requires `mingw-w64` (`sudo apt install mingw-w64`).
-
 ```
-make
+make clean & make
 ```
 
 Produces `spooler_potato_bof.o`.
 
 ## Credits
 
-- Lee Christensen (`@tifkin_`) — MS-RPRN printer bug
-- itm4n — PrintSpoofer writeups
+- Lee Christensen (`@tifkin_`) - MS-RPRN printer bug
+- itm4n - PrintSpoofer writeups
 - The potato family
